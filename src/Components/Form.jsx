@@ -2,7 +2,6 @@ import { useState } from 'react';
 
 
 const Form = () => {
-  //Aqui deberan implementar el form completo con sus validaciones
   const [user, setUser] = useState({
     nombre: "",
     email: ""
@@ -43,9 +42,9 @@ const Form = () => {
             “Por favor ingrese la información correctamente”.
           </h4> : null}
         {mostrar ?
-          <div className=''>
-            <p className='success-message' >{`Gracias ${user.nombre}, te contactaremos pronto`}</p>
-            <p className='success-message' >{`a tu correo registrado: ${user.email}`}</p>
+          <div className='success-message'>
+            <p className='' >{`Gracias ${user.nombre}, te contactaremos pronto`}</p>
+            <p className='' >{`a tu correo registrado: ${user.email}`}</p>
           </div> : null}
       </form>
     </div>

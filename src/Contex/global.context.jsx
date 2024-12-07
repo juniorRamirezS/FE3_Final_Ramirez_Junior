@@ -15,13 +15,11 @@ export const initialState = {
 
 export const ContextProvider = ({ children }) => {
 
-  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const url = "https://jsonplaceholder.typicode.com/users";
 
-  console.log("Estado inicial:", initialState);
 
   useEffect(() => {
     localStorage.setItem("favs", JSON.stringify(state.favs));
@@ -29,16 +27,9 @@ export const ContextProvider = ({ children }) => {
 
   useEffect(() => {
     axios(url).then((res) => {
-      console.log(res.data);
       dispatch({ type: "GET_CHARS", payload: res.data });
     })
   }, []);
-  console.log("Estado actual:", state);
-
-  const contextValue = useMemo(
-    () => ({ state, dispatch })
-    [state, dispatch] // Recalcular solo si `state` o `dispatch` cambian
-  );
 
   return (
     <ContextGlobal.Provider value={{ state, dispatch }}>
