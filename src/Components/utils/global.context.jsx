@@ -1,6 +1,8 @@
+import axios from "axios";
+
 import { createContext } from "react";
 
-export const initialState = {theme: "", data: []}
+export const initialState = { theme: "", data: [] }
 
 export const ContextGlobal = createContext(undefined);
 
@@ -13,3 +15,5 @@ export const ContextProvider = ({ children }) => {
     </ContextGlobal.Provider>
   );
 };
+
+export default ContextProvider; 
