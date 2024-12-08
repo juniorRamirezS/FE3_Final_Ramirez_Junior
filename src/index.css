@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -116,7 +116,8 @@ nav {
 
 .navbar.dark {
   background-color: #000;
-  color: #fff
+  color: #fff;
+  padding: 0;
 }
 
 a {
@@ -137,24 +138,52 @@ a:hover {
 
 footer {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   text-align: center;
   align-items: center;
-  padding: 2rem;
-  width: 100%;
   height: 50px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: #f0f0f0e6;
   box-shadow: 0 4px 8px #0000001a
 }
 
-footer img {
+footer .listredes img {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  background-color: black;
+  border-radius: 5px;
+}
+
+footer .list img {
   width: 200px;
-  margin: 0
+  height: 50px;
+  margin: 0;
+}
+
+.list {
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.listredes {
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+  align-items: center;
 }
 
 footer p {
   margin: 0;
-  padding-top: .7rem
 }
 
 form {
@@ -220,7 +249,7 @@ tr:nth-child(even) {
 }
 
 .dark {
-  background-color: #12121296;
+  background-color: #00000096;
   color: white;
   padding: 2rem;
 }
